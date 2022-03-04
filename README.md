@@ -1,14 +1,14 @@
-##Todo App
+# Todo App
 
-**How to run code**
+## How to run code
 
-###Client:
+### Client:
 
 ```
 $ yarn install
 $ yarn start
 ```
-###Server:
+### Server:
 ```
 $ yarn install
 $ yarn start
