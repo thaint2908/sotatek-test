@@ -1,0 +1,88 @@
+.item-form {
+  display: flex;
+  flex-direction: column;
+
+  input,
+  select {
+    height: 2rem;
+    padding-left: 0.5rem;
+    border-radius: 0;
+    border: 1px solid #bdbdbd;
+    margin-bottom: 2rem;
+
+    @media (max-width: 880px) {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  label {
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+  }
+
+  > textarea {
+    margin-bottom: 2rem;
+    border-radius: 0;
+
+    @media (max-width: 880px) {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  .input-group {
+    display: flex;
+    flex-direction: row;
+
+    @media (max-width: 880px) {
+      flex-direction: column;
+    }
+    .input-date {
+      display: flex;
+      flex-direction: column;
+      margin-right: 1rem;
+      width: 50%;
+      margin-bottom: 0;
+
+      @media (max-width: 880px) {
+        width: 100%;
+      }
+
+      > input {
+        height: 2rem;
+      }
+    }
+
+    .input-priority {
+      display: flex;
+      flex-direction: column;
+      margin-left: 1rem;
+      width: 50%;
+
+      @media (max-width: 880px) {
+        width: 100%;
+        margin-left: 0;
+      }
+
+      > select {
+        height: 2rem;
+        width: 100%;
+      }
+    }
+  }
+
+  .btn {
+    height: 2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    border: none;
+    color: #ffffff;
+    background-color: #5cb85c;
+    transition: all 0.2s;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
