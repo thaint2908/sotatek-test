@@ -28,7 +28,7 @@ const ItemForm = (props: PropsType) => {
     const [updateTask,{isLoading:updating}] = useUpdateTaskMutation();
     const [createTask,{isLoading:creating}] = useCreateTaskMutation();
     const [inputTitle, setInputTitle] = useState<string | undefined>(props.title);
-    const {register, handleSubmit} = useForm<ItemFormValue>({
+    const {register, handleSubmit,formState:{errors}} = useForm<ItemFormValue>({
         defaultValues:{
             title: props.title ?? "",
             description:props.description ?? "",
@@ -56,6 +56,7 @@ const ItemForm = (props: PropsType) => {
     return (
         <form className="item-form" onSubmit={handleSubmit(onSubmit)}>
             <input {...register("title", {required: true})}/>
+             {errors.title && <span className="error">This field is required</span>}
             <label>Description</label>
             <textarea {...register("description")} id="description" name="description" rows={8}/>
             <div className="input-group">
